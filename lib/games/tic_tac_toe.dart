@@ -45,9 +45,9 @@ class _TicTacToeState extends State<TicTacToe> {
   //on box tap logic
   void _tapped(int index) {
     setState(() {
-      if (ohTurn) {
+      if (ohTurn && displayExOh[index] == '') {
         displayExOh[index] = 'o';
-      } else {
+      } else if (!ohTurn && displayExOh[index] == '') {
         displayExOh[index] = 'x';
       }
 

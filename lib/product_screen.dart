@@ -272,7 +272,7 @@ class _ProductScreenState extends State<ProductScreen> {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blueGrey[800],
+                    backgroundColor: Colors.blueGrey[600],
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(vertical: 8),
                     shape: RoundedRectangleBorder(
