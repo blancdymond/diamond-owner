@@ -239,6 +239,7 @@ class _ProductScreenState extends State<ProductScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
+          backgroundColor: Theme.of(context).colorScheme.background,
           title: Text("would you like to play a game?"),
           actions: [
             Row(
@@ -246,7 +247,7 @@ class _ProductScreenState extends State<ProductScreen> {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pop;
+                    Navigator.pop(context);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.red,
