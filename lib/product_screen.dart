@@ -1,3 +1,4 @@
+import 'package:diamond_owner/games/tic_tac_toe.dart';
 import 'package:diamond_owner/main.dart';
 import 'package:diamond_owner/pages/I_am_Rich.dart';
 import 'package:diamond_owner/themes/theme_provider.dart';
@@ -192,7 +193,11 @@ class _ProductScreenState extends State<ProductScreen> {
             const SizedBox(width: 12),
             Expanded(
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    _showDialogToSwitchPage();
+                  });
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Theme.of(context).colorScheme.onPrimary,
                   foregroundColor: Colors.white,
@@ -226,6 +231,60 @@ class _ProductScreenState extends State<ProductScreen> {
           ),
         ],
       ),
+    );
+  }
+
+  void _showDialogToSwitchPage() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("would you like to play a game?"),
+          actions: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop;
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  child: Text('No'),
+                ),
+
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return TicTacToe();
+                        },
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blueGrey[800],
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  child: Text('Yes'),
+                ),
+              ],
+            ),
+          ],
+        );
+      },
     );
   }
 }
