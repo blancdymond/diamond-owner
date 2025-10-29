@@ -1,3 +1,4 @@
+import 'package:diamond_owner/intro_pages/intro_page.dart';
 import 'package:diamond_owner/pages/I_am_Rich.dart';
 import 'package:diamond_owner/product_screen.dart';
 import 'package:diamond_owner/themes/theme_provider.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'I Am Rich',
-      home: PageView(children: [IAmRich(), ProductScreen()]),
+      home: PageView(children: [IntroPage()]),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
