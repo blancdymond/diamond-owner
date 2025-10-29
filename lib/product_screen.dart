@@ -157,7 +157,7 @@ class _ProductScreenState extends State<ProductScreen> {
       bottomNavigationBar: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: Colors.blueGrey[900],
+          //color: Colors.blueGrey[900],
           boxShadow: [
             BoxShadow(
               color: Colors.grey.withOpacity(0.1),
@@ -177,14 +177,14 @@ class _ProductScreenState extends State<ProductScreen> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   side: BorderSide(
-                    color: Theme.of(context).colorScheme.onSecondary,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
                 child: Text(
                   'Add to Cart',
                   style: TextStyle(
                     fontSize: 16,
-                    color: Theme.of(context).colorScheme.onSecondary,
+                    color: Theme.of(context).colorScheme.primary,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -199,7 +199,7 @@ class _ProductScreenState extends State<ProductScreen> {
                   });
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Theme.of(context).colorScheme.onPrimary,
+                  backgroundColor: Theme.of(context).colorScheme.primary,
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   shape: RoundedRectangleBorder(

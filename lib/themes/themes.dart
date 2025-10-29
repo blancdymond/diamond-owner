@@ -6,6 +6,9 @@ ThemeData lightMode = ThemeData(
     backgroundColor: Colors.blueGrey[300],
     foregroundColor: Colors.black,
   ),
+  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    backgroundColor: Colors.blueGrey[300],
+  ),
   colorScheme: ColorScheme.light(
     background: Colors.blueGrey[100],
     primary: Colors.blueGrey.shade900,
@@ -21,7 +24,9 @@ ThemeData lightMode = ThemeData(
 ThemeData darkMode = ThemeData(
   brightness: Brightness.dark,
   appBarTheme: AppBarTheme(backgroundColor: Colors.blueGrey[900]),
-  // bottomAppBarTheme: BottomAppBarThemeData(color: Colors.blueGrey[900]),
+  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    backgroundColor: Colors.blueGrey[900],
+  ),
   colorScheme: ColorScheme.dark(
     background: Colors.blueGrey[800],
     primary: Colors.blueGrey,
