@@ -21,7 +21,9 @@ class IAmRich extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             SizedBox(height: 150),
-            Center(child: Image(image: AssetImage('images/diamond.png'))),
+            Center(
+              child: Image(image: AssetImage('assets/images/diamond.png')),
+            ),
             SizedBox(height: 50),
             Text(
               'If you\'re seeing this page, it means your payment of \$999.9 was successful',

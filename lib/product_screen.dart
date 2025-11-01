@@ -77,7 +77,7 @@ class _ProductScreenState extends State<ProductScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image(
-                        image: AssetImage('images/diamond.png'),
+                        image: AssetImage('assets/images/diamond.png'),
                         height: 260,
                       ),
                       // Icon(Icons.diamond, size: 120, color: Colors.blueGrey[300]),
